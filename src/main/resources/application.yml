@@ -9,7 +9,7 @@ spring:
     url: jdbc:mysql://localhost:3306/springboot-common?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
-    name: application
+    name: application #项目名称
   redis:
 #    port: 6379 #redis用户名
 #    password: root  #redis密码
@@ -21,4 +21,7 @@ spring:
         max-active: 8
         max-wait: -1
       shutdown-timeout: 320
+    database: 0
+    nameSpace: springboot-common #redis命名空间，一般为项目名称
+
 
