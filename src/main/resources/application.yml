@@ -1,0 +1,24 @@
+server:
+  port: 8080 #端口号
+
+spring:
+  datasource:
+    password: root #数据库用户名
+    username: 217812.com #数据库密码
+    #springboot-common需要切换为对应数据库
+    url: jdbc:mysql://localhost:3306/springboot-common?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: application
+  redis:
+#    port: 6379 #redis用户名
+#    password: root  #redis密码
+    host: localhost
+    lettuce:
+      pool:
+        max-idle: 38
+        min-idle: 0
+        max-active: 8
+        max-wait: -1
+      shutdown-timeout: 320
+
