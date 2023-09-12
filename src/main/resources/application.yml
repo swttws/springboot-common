@@ -3,25 +3,20 @@ server:
 
 spring:
   datasource:
-    password: root #数据库用户名
-    username: 217812.com #数据库密码
+    password: 217812.com #数据库用户名
+    username: root #数据库密码
     #springboot-common需要切换为对应数据库
     url: jdbc:mysql://localhost:3306/springboot-common?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: application #项目名称
+
+#redis相关配置
+su:
   redis:
-#    port: 6379 #redis用户名
 #    password: root  #redis密码
-    host: localhost
-    lettuce:
-      pool:
-        max-idle: 38
-        min-idle: 0
-        max-active: 8
-        max-wait: -1
-      shutdown-timeout: 320
+    address: localhost:6379
     database: 0
-    nameSpace: springboot-common #redis命名空间，一般为项目名称
+
 
 
