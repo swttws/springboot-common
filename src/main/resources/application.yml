@@ -10,6 +10,9 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: application #项目名称
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
 
 #redis相关配置
 su:
@@ -17,6 +20,16 @@ su:
 #    password: root  #redis密码
     address: localhost:6379
     database: 0
+
+#swagger文档相关配置
+  document:
+    title: xxx网站 #swagger网站名称
+    description: xxx描述 #swagger文档描述
+    username: xxx用户  #文档用户名
+    email: xx  #邮箱
+    enable: true  #是否开启swagger文档，true开启
+    scanPacket: com.su #扫描的包
+
 
 
 
