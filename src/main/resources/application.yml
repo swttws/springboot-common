@@ -21,6 +21,10 @@ su:
     address: localhost:6379
     database: 0
 
+  es:
+    host: 43.139.206.205
+    port: 9200
+
 #swagger文档相关配置
   document:
     title: xxx网站 #swagger网站名称
